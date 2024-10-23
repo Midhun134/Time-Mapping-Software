@@ -1,0 +1,26 @@
+<table>
+    <thead>
+        <tr>
+            <th>Vehicle</th>
+            <th>Job Description</th>
+            <th>Job Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.vehicle.vehicle_number }}</td>
+            <td>{{ job.job_description }}</td>
+            <td>{{ job.job_status }}</td>
+            <td>
+                <a href="{% url 'update_job' job.id %}">Update</a>
+                <form method="POST" action="{% url 'delete_job' job.id %}">
+                    {% csrf_token %}
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>

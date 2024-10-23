@@ -1,0 +1,14 @@
+<form method="POST">
+    {% csrf_token %}
+    <label for="vehicle">Select Vehicle:</label>
+    <select name="vehicle" id="vehicle">
+        {% for vehicle in vehicles %}
+            <option value="{{ vehicle.id }}">{{ vehicle.vehicle_number }} - {{ vehicle.model }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="job_description">Job Description:</label>
+    <textarea name="job_description" id="job_description"></textarea>
+
+    <button type="submit">Create Job</button>
+</form>

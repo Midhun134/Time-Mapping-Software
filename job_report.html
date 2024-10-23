@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Report</title>
+</head>
+<body>
+    <h1>Job Report</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Vehicle Number</th>
+                <th>Job Description</th>
+                <th>Idle Time</th>
+                <th>Worker Efficiency (%)</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for job in report_data %}
+            <tr>
+                <td>{{ job.vehicle_number }}</td>
+                <td>{{ job.job_description }}</td>
+                <td>{{ job.idle_time }}</td>
+                <td>{{ job.worker_efficiency }}</td>
+                <td>{{ job.job_status }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

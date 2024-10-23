@@ -1,0 +1,10 @@
+com.google.zxing.client.j2se==3.4.1
+com.google.zxing==3.4.1
+androidx.appcompat==1.6.1
+com.squareup.okhttp3==4.9.3
+Django==4.2
+datetime==3.3
+python==3.10
+qrcode[pil]==4.5
+com.google.mlkit==17.0.0
+com.google.android.gms==18.0.1

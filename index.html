@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automotive Workshop Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Automotive Workshop Management</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#login">Staff Login</a></li>
+            <li><a href="#job-registration">Job Registration</a></li>
+            <li><a href="#vehicle-tracking">Vehicle Tracking</a></li>
+            <li><a href="#job-details">Job Details</a></li>
+        </ul>
+    </nav>
+
+    <!-- Staff Login Section -->
+    <section id="login">
+        <h2>Staff Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div id="loginMessage"></div>
+    </section>
+
+    <!-- Job Registration Section -->
+    <section id="job-registration">
+        <h2>Job Registration</h2>
+        <form id="jobForm">
+            <label for="vehicleNumber">Vehicle Number:</label>
+            <input type="text" id="vehicleNumber" name="vehicleNumber" required>
+            <label for="jobDescription">Job Description:</label>
+            <textarea id="jobDescription" name="jobDescription" required></textarea>
+            <button type="submit">Register Job</button>
+        </form>
+        <div id="jobMessage"></div>
+    </section>
+
+    <!-- Vehicle Tracking Section -->
+    <section id="vehicle-tracking">
+        <h2>Vehicle Tracking</h2>
+        <input type="text" id="trackingNumber" placeholder="Enter Vehicle Number">
+        <button onclick="trackVehicle()">Track</button>
+        <div id="trackingResult"></div>
+    </section>
+
+    <!-- Job Details Section -->
+    <section id="job-details">
+        <h2>Job Details</h2>
+        <input type="text" id="searchJob" placeholder="Enter Vehicle Number">
+        <button onclick="searchJob()">Search Job</button>
+        <div id="jobResult"></div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
